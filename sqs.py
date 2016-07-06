@@ -26,7 +26,7 @@ class Queue():
 		{'Messages': 
 			[
 				{
-					'Body': 'http://www.discounttiredirect.com/direct/filterWheelProducts.do?pgWheels=0&vid=008845&yr=1961&wd=16&wth=7&rw=&bp=&counter=5&fl=&sortBy=prca&fqs=true', 
+					'Body': 'www.google.com', 
 					'ReceiptHandle': 'AQEBrG6H5hA3jnjLWctEAoxMWvgD0C0LScjg4xgjhHQwgOzczQC0zrQzUUFRhBQKjuuesAZbYpvFJwAQ/JQezv+erpNhlZ+swfDlGxi1qwsjz7s1ovVammvkyTn9pxLGeODpAVlZw/0jfnNvBplnC6+gHzMAgs6eyuCH0g0IVuezJ6DQUwCuAUyM03Gw9TmsoBz3rFTYry/VuYVAENJRaBJP3gBUuVZFl7Nvvlx56XuOn86SfwBqzIMZ5+UlRBoURwlh42hgFS/uEVQBbFS5rePXOlzBqUYos5YcSSksSum2eyp2jBaKjWzfwOJDZFeYVHmx5meVVQEidNkwhHw3vVTTQnIQZ651bVFTR2tu6JcOT9Xf9TjFFOFup9xFtRceVbT37mHRvMFOrB8kWiPhBg2Jow==', 
 					'MD5OfBody': 'fb1083d318e350b368e3369f92578781', 
 					'MessageId': 'a15d68c9-f4a6-4ece-8df4-5130c7decdd0'
