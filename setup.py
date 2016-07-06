@@ -24,7 +24,6 @@ setup(
     install_requires=[
       'pymongo',
       'boto3',
-      'smtplib',
       'yaml'
   ]
 )
