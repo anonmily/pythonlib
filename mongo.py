@@ -1,16 +1,17 @@
+# Haven't edited this yet, so not generic/working right now.
+
 import time, datetime, json, os, logging
 
 from pymongo import MongoClient, cursor
 from bson import ObjectId
 
-from config import MONGO_URL
-COLLECTION = 'apexnirvana20160616'
+from config import MONGO_URL, COLLECTION
 
 print MONGO_URL
 
 # MongoDB
 client = MongoClient(MONGO_URL)
-db = client['dtdscrape']
+db = client[COLLECTION]
 
 # Methods
 class JSONEncoder(json.JSONEncoder):
