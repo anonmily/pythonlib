@@ -24,6 +24,6 @@ setup(
     install_requires=[
       'pymongo',
       'boto3',
-      'yaml'
+      'pyyaml'
   ]
 )
