@@ -23,7 +23,6 @@ setup(
     packages=find_packages(exclude=['contrib', 'docs', 'tests']),
     install_requires=[
       'pymongo',
-      'bson',
       'boto3',
       'smtplib',
       'yaml'
