@@ -68,12 +68,33 @@ def get_diff(newfile, oldfile):
 	return changes
 
 def get_changed_rows(new, old):
-	changed = {}
-	changed['rows'] = get_diff(new, old)
-	changed['count'] = len(changed['rows'])
-	changed['has_changed'] = changed['count'] > 0
-	changed['headers'] = get_headers(new)
-	return changed
+	'''
+		Expects new and old to be paths/filenames for CSV files (must contain header row).
+
+		# No changes
+		{ 'count': 0,
+			'has_changed': False,
+			'headers': [ 'sono',
+						'custno',
+						'sodate',
+						'ordate'],
+			'rows': []}
+
+		# Changed:
+		{ 'count': 1,
+			'has_changed': True,
+			'headers': [ 'item','onhand'],
+			'rows': [ { 'item': 'SHIRT', 'onhand': '-1.0'}]
+		}
+	'''
+	changed_rows = get_diff(new, old)
+	changed_count = len(changed_rows)
+	return {
+		'count': 		changed_count,
+		'has_changed': 	changed_count > 0,
+		'headers': 		get_headers(new),
+		'rows': 		changed_rows
+	}
 
 def csv_to_dictarray(filename, headers):
 	mainarr = []

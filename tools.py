@@ -1,4 +1,4 @@
-import os, random, requests, re
+import os, random, requests, re, datetime, getpass
 from bs4 import BeautifulSoup
 
 ###### REGEXP ######
@@ -7,6 +7,12 @@ regexp_tabs = re.compile(r'\t\n+')
 regexp_quotes = re.compile(r'\u2033+')
 
 ###### METHODS ######
+def log(message):
+	print timestamp() + '\t' + getpass.getuser() + '\t' +  str(message)
+
+def timestamp():
+	return '{:%Y-%b-%d %H:%M:%S}'.format(datetime.datetime.now())
+
 def join(*args):
 	return os.path.normpath(os.path.join(*args))
 
