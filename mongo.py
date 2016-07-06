@@ -4,7 +4,6 @@ from pymongo import MongoClient, cursor
 from bson import ObjectId
 
 from config import MONGO_URL
-COLLECTION = 'apexnirvana20160616'
 
 print MONGO_URL
 
