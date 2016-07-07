@@ -16,6 +16,12 @@ def timestamp():
 def join(*args):
 	return os.path.normpath(os.path.join(*args))
 
+def mysql_date(date):
+	date = str(date).split('/')
+	( month, day, year ) = date
+	year = 2000 + int(year)
+	return str(year) + '-' + str(month) + '-' + str(day)
+
 def sleep():
 	return random.randint(1,30) + random.randint(1,30)/2
 
