@@ -28,12 +28,20 @@ def to_json(val):
 		val = results
 	return JSONEncoder().encode(val)
 
-def insert(collection, hash_message):
-	insert_result = db[collection].insert_one( hash_message )
-	insert_id = str(insert_result.inserted_id)
-	return insert_id
+class Mongo:
+	def __init__(self, MONGO_URL, collection):
+		self.client = MongoClient(MONGO_URL)
+		self.db = self.client[collection]
 
-def get(collection, query=False):
-	if not query:
-		query = {}
-	return to_json(db[collection].find(query))
+	def insert(self, collection, hash_message):
+		insert_result = self.db[collection].insert_one( hash_message )
+		insert_id = str(insert_result.inserted_id)
+		return insert_id
+
+	def get(self, collection, query=False):
+		if not query:
+			query = {}
+		return to_json(self.db[collection].find(query))
+
+	def to_json(self, val):
+		return to_json(val)
